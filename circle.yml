@@ -3,6 +3,7 @@ machine:
     XCODE_WORKSPACE: SimpleCircleCI.xcworkspace
 test:
   override:
+    - ls -al
     - xctool
       -reporter pretty
       -reporter junit:$CIRCLE_TEST_REPORTS/xcode/results.xml
