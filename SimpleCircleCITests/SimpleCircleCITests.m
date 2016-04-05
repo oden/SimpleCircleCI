@@ -6,9 +6,9 @@
 //  Copyright © 2016年 JITAKUKEIBI INC. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+#import <KIF.h>
 
-@interface SimpleCircleCITests : XCTestCase
+@interface SimpleCircleCITests : KIFTestCase
 
 @end
 
@@ -34,6 +34,14 @@
     [self measureBlock:^{
         // Put the code you want to measure the time of here.
     }];
+}
+
+- (void)testEdit {
+    [tester tapViewWithAccessibilityLabel:@"Edit"];
+    [tester tapViewWithAccessibilityLabel:@"Done"];
+    [tester tapViewWithAccessibilityLabel:@"Add"];
+    [tester tapViewWithAccessibilityLabel:@"Add"];
+    [tester tapViewWithAccessibilityLabel:@"Add"];
 }
 
 @end
